@@ -1,0 +1,40 @@
+﻿  renderer.cpp
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(30,74): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(30,48): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(52,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(55,102): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(54,81): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(99,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(104,34): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(103,67): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\renderer.cpp(124,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating code
+  2 of 317 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  sfml.vcxproj -> C:\Users\littl\source\repos\sfml\Release\sfml.exe

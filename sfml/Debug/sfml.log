@@ -1,0 +1,22 @@
+﻿  collisiondetector.cpp
+C:\Users\littl\source\repos\sfml\sfml\collisiondetector.cpp(10,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\collisiondetector.cpp(11,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\collisiondetector.cpp(12,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\collisiondetector.cpp(13,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  game.cpp
+C:\Users\littl\source\repos\sfml\sfml\game.cpp(97,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\game.cpp(99,197): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\game.cpp(99,77): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\game.cpp(203,81): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\littl\source\repos\sfml\sfml\game.cpp(259,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
+  sfml.vcxproj -> C:\Users\littl\source\repos\sfml\Debug\sfml.exe
