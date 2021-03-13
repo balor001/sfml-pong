@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\littl\source\repos\sfml\Release\sfml.exe</FullPath>
+      <FullPath>C:\Users\littl\source\repos\sfml\sfml\sfml-pong\Release\sfml.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

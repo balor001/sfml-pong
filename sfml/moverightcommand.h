@@ -9,7 +9,7 @@ public:
     {
         // Move the "player" up
         Vector3 vel = ball.m_particle->getVelocity();
-        vel = vel + Vector3(25.0, 0.0, 0.0);
+        vel = vel + Vector3(50.0, 0.0, 0.0);
         ball.m_particle->setVelocity(vel);
     }
 };

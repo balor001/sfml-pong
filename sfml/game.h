@@ -20,30 +20,32 @@ public:
 
 	// Member variables
 	Particle box_particle;
+	Particle box_particle2;
+	Particle box_particle3;
 	Box myBox;
+	Box myBox2;
+	Box myBox3;
 	
 	Ball myBall;
 	Particle myBall_particle;
 
 	// Member variables for forces
-	GravityForce gf;
+	GravityForce gravityForce;
 
-	// Member variables for Airblowers
-	Airblower myBlower;
-	Airblower myBlowerOther;
+	//// Member variables for Airblowers
+	//Airblower myBlower;
+	//Airblower myBlowerOther;
 
-	// Member variables for Airflows
-	AirblowerForce abf_first;
-	AirblowerForce abf_other;
+	//// Member variables for Airflows
+	//AirblowerForce abf_first;
+	//AirblowerForce abf_other;
 
-	//Blackholeforce;
-	BlackholeForce blackholeForce;
+	////Blackholeforce;
+	//BlackholeForce blackholeForce;
 
 	// Lists for particles and balls
 	std::list<Particle*> list_particles;
 	std::list<Ball*> list_balls;
-
-	
 
 private:
 	// Helper for bottom wall bounce

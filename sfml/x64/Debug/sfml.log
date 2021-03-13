@@ -1,2 +1,119 @@
-﻿  main.cpp
-C:\Users\littl\source\repos\sfml\sfml\main.cpp(1,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+﻿  airblower.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(18,38): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(19,67): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(33,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(34,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(47,38): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(48,97): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(62,30): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\airblower.cpp(64,29): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  airblowerforce.cpp
+  ball.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\ball.cpp(18,46): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\ball.cpp(19,102): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  blackhole.cpp
+  blackholeforce.cpp
+  box.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\box.cpp(19,46): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\box.cpp(20,102): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  collisiondetector.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\collisiondetector.cpp(10,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\collisiondetector.cpp(11,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\collisiondetector.cpp(12,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\collisiondetector.cpp(13,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  effect_particle.cpp
+  game.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\game.cpp(190,69): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\game.cpp(199,68): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\game.cpp(206,69): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\game.cpp(213,69): warning C4390: ';': empty controlled statement found; is this the intent?
+  gravityforce.cpp
+  inputhandler.cpp
+  main.cpp
+  particle.cpp
+  renderer.cpp
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(30,74): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(30,48): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(52,57): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(55,102): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(54,81): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(99,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(104,34): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(103,67): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\renderer.cpp(124,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  vector3.cpp
+  Generating Code...
+C:\Users\littl\source\repos\sfml\sfml\sfml-pong\sfml\collisiondetector.cpp(223): warning C4715: 'CollisionDetector::detectAndResolveCollision': not all control paths return a value
+sfml-graphics-s-d.lib(RenderStates.cpp.obj) : fatal error LNK1112: module machine type 'x86' conflicts with target machine type 'x64'

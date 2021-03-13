@@ -8,50 +8,66 @@ Game::Game()
 	Vector3 acc(0.0, 0.0, 0.0);
 
 	// The box particle - the position is the CENTER of the box
-	box_particle.setPosition(Vector3(600.0, 400.0, 0.0));
-	box_particle.setMass(100.0); // set mass to 100 kg
-
+	box_particle.setPosition(Vector3(1300.0, 400.0, 0.0));
+	box_particle.setMass(200.0);
 	// Set our box-gameobject
 	myBox.setPhysicsParticle(&box_particle);
-	myBox.setWidth(350.0);
-	myBox.setHeight(50.0);
+	myBox.setWidth(300.0);
+	myBox.setHeight(300.0);
 	myBox.update();
 
+	// The box particle - the position is the CENTER of the box
+	box_particle2.setPosition(Vector3(800.0, 400.0, 0.0));
+	box_particle2.setMass(100.0);
+	// Set our box-gameobject
+	myBox2.setPhysicsParticle(&box_particle2);
+	myBox2.setWidth(200.0);
+	myBox2.setHeight(200.0);
+	myBox2.update();
 
-	myBall_particle.setPosition(Vector3(100.0, 100.0, 0.0));
-	myBall_particle.setVelocity(Vector3(0.0, 0.0, 0.0));
-	myBall_particle.setMass(1.0);
+	// The box particle - the position is the CENTER of the box
+	box_particle3.setPosition(Vector3(1300.0, 100.0, 0.0));
+	box_particle3.setMass(100.0);
+	// Set our box-gameobject
+	myBox3.setPhysicsParticle(&box_particle3);
+	myBox3.setWidth(320.0);
+	myBox3.setHeight(100.0);
+	myBox3.update();
+
+	myBall_particle.setPosition(Vector3(150.0, 150.0, 0.0));
+	myBall_particle.setVelocity(Vector3(500.0, 500.0, 0.0));
+	myBall_particle.setMass(500.0);
 	
 	myBall.setPhysicsParticle(&myBall_particle);
-	myBall.setRadius(25.0);
+	myBall.setRadius(50.0);
 	myBall.update();
 
 	//
 	// Next we construct the forces:
 	//    
 	// Gravity-force
-	gf.setGravity(Vector3(0, -10.0, 0));
+	gravityForce.setGravity(Vector3(0, -100.0, 0));
 
-	// Airblower force first
-	abf_first.setPosition(Vector3(400.0, 400.0, 0.0));
-	abf_first.setForce(Vector3(50.0, 2500.0, 0.0));
-	abf_first.setDist(10);
-	abf_first.setHeight(100);
+	//// Airblower force first
+	//abf_first.setPosition(Vector3(400.0, 400.0, 0.0));
+	//abf_first.setForce(Vector3(50.0, 2500.0, 0.0));
+	//abf_first.setDist(10);
+	//abf_first.setHeight(100);
 
-	// Airblower force other
-	abf_other.setPosition(Vector3(1200.0, 400.0, 0.0));
-	abf_other.setForce(Vector3(50.0, 2500.0, 0.0));
-	abf_other.setDist(10);
-	abf_other.setHeight(150);
+	//// Airblower force other
+	//abf_other.setPosition(Vector3(1200.0, 400.0, 0.0));
+	//abf_other.setForce(Vector3(50.0, 2500.0, 0.0));
+	//abf_other.setDist(10);
+	//abf_other.setHeight(150);
 
-	// Airblower related stuff
-	myBlower.setAirblowerForce(&abf_first);
-	myBlowerOther.setAirblowerForce(&abf_other);
+	//// Airblower related stuff
+	//myBlower.setAirblowerForce(&abf_first);
+	//myBlowerOther.setAirblowerForce(&abf_other);
 
-	// Blackhole force
-	blackholeForce.setPosition(Vector3(800.0, 400.0, 0.0));
-	blackholeForce.setForce(25000.0);
-	blackholeForce.setRadius(1000);
+	//// Blackhole force
+	//blackholeForce.setPosition(Vector3(800.0, 400.0, 0.0));
+	//blackholeForce.setForce(25000.0);
+	//blackholeForce.setRadius(1000);
 
 	// Test for some particles and balls!
 	for (int i = 0; i < 0; i++) {
@@ -124,16 +140,19 @@ void Game::update(double deltaTime)
 {
 	
 	// Update forces for the ball particle:
-	gf.updateForce(&myBall_particle, 0.0);
-	abf_first.updateForce(&myBall_particle, 0.0);
-	abf_other.updateForce(&myBall_particle, 0.0);
-	blackholeForce.updateForce(&myBall_particle, 0.0);
+	gravityForce.updateForce(&myBall_particle, 0.0);
+	//abf_first.updateForce(&myBall_particle, 0.0);
+	//abf_other.updateForce(&myBall_particle, 0.0);
+	//blackholeForce.updateForce(&myBall_particle, 0.0);
 	myBall_particle.update(deltaTime);
-	
-	//double damping = 0.9;
 
-	//box_particle.update(deltaTime);
-	//myBox.update();
+	myBox.update();
+	myBox2.update();
+
+	box_particle.update(deltaTime);
+	gravityForce.updateForce(&box_particle, 0.0);
+
+	//double damping = 0.9;
 
 	myBall.update();
 	checkAndResolveBottomWall(&myBall);
@@ -141,14 +160,13 @@ void Game::update(double deltaTime)
 	checkAndResolveRightWall(&myBall);
 	checkAndResolveTopWall(&myBall);
 
-
 	// Iterate through the particle list
 	for (auto it = list_particles.begin(); it != list_particles.end(); it++)
 	{
-		gf.updateForce(*it, 0.0);
-		abf_first.updateForce(*it, 0.0);
-		abf_other.updateForce(*it, 0.0);
-		blackholeForce.updateForce(*it, 0.0);
+		gravityForce.updateForce(*it, 0.0);
+	//	abf_first.updateForce(*it, 0.0);
+	//	abf_other.updateForce(*it, 0.0);
+	//	blackholeForce.updateForce(*it, 0.0);
 
 		(*it)->update(deltaTime);
 	}
@@ -165,13 +183,6 @@ void Game::update(double deltaTime)
 
 		(*it)->update();
 	}
-
-
-
-	//if (CollisionDetector::testAABBOverlap(&myBall)
-	//{
-	//
-	//}
 
 	// Collisions for ground and walls..
 	// Iterate though the balls 
@@ -211,6 +222,20 @@ void Game::update(double deltaTime)
 	if (CollisionDetector::testAABBOverlap(&myBall, &myBox))
 	{
 		if (CollisionDetector::detectAndResolveCollision(&myBall, &myBox));
+
+		// There was a collision
+	}
+
+	if (CollisionDetector::testAABBOverlap(&myBall, &myBox2))
+	{
+		if (CollisionDetector::detectAndResolveCollision(&myBall, &myBox2));
+
+		// There was a collision
+	}
+	
+	if (CollisionDetector::testAABBOverlap(&myBall, &myBox3))
+	{
+		if (CollisionDetector::detectAndResolveCollision(&myBall, &myBox3));
 
 		// There was a collision
 	}

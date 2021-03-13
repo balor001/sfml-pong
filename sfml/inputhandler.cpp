@@ -7,17 +7,6 @@ InputHandler::InputHandler() {
 	buttonX_ = new MoveLeftCommand();
 	buttonA_ = new MoveDownCommand();
 	buttonB_ = new MoveRightCommand();
-
-	//// Find a joystick...
-	//sf::Joystick::update();
-	//for (int i = 0; i < 31; i++) {
-	//	if (sf::Joystick::isConnected(i)) {
-	//		this->JoystickID = i;
-	//		std::cout << "Joystick " << JoystickID << " is connected!" << std::endl;
-	//		break;
-	//	}
-	//}
-
 }
 
 Command* InputHandler::handleInput(sf::RenderWindow* pWindow,
@@ -39,30 +28,25 @@ Command* InputHandler::handleInput(sf::RenderWindow* pWindow,
 		if (event.type == sf::Event::KeyPressed) {
 
 			if (event.key.code == sf::Keyboard::W) {
+				std::cout << "W" << std::endl;
 				return buttonY_;
-				//pMyGame->BallUp();
-				//buttonY_->execute();
 			}
-			if (event.key.code == sf::Keyboard::A)
+
+			if (event.key.code == sf::Keyboard::A) {
+				std::cout << "A" << std::endl;
 				return buttonX_;
-			//pMyGame->BallLeft();
-			if (event.key.code == sf::Keyboard::S)
+			}
+
+			if (event.key.code == sf::Keyboard::S) {
+				std::cout << "S" << std::endl;
 				return buttonA_;
-			//pMyGame->BallDown();
-			if (event.key.code == sf::Keyboard::D)
+			}
+
+			if (event.key.code == sf::Keyboard::D) {
+				std::cout << "D" << std::endl;
 				return buttonB_;
-			//pMyGame->BallRight();      
+			}
 		}
-
-		//if (JoystickID >= 0 && sf::Joystick::isConnected(JoystickID)) {
-		//	for (int i = 0; i < 32; i++) {
-		//		if (sf::Joystick::isButtonPressed(JoystickID, i)) {
-		//			std::cout << "Button " << i << " was pressed!" << std::endl;
-		//		}
-		//	}
-		//}
-
-	} // end while
-
+	}
 	return nullptr;
 }
